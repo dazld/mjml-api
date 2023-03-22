@@ -33,4 +33,4 @@ app.post('/api/render', function(req,res){
   res.sendStatus(400);
 });
 
-module.exports = app;
+export default app;
