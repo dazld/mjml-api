@@ -16,7 +16,7 @@ app.use(function(req, res, next){
   next();
 });
 
-app.post('/render', function(req,res){
+app.post('/api/render', function(req,res){
   if (req.body.mjml) {
     const {html, errors} = mjml2Html(req.body.mjml);
 
@@ -30,4 +30,4 @@ app.post('/render', function(req,res){
   res.sendStatus(400);
 });
 
-app.listen(3002)
+module.exports = app;
